@@ -23,7 +23,7 @@ if TELEGRAPH_ACCESS_TOKEN:
 else:
     telegraph = Telegraph()
     try:
-        telegraph.create_account(short_name="DreamxBotz")
+        telegraph.create_account(short_name="Pᴀᴛʀɪᴄᴋ Bᴏᴛᴢ")
     except Exception:
         logger.exception("Failed to create Telegraph account")
 
@@ -192,7 +192,7 @@ async def extract_data_handler(client: Client, query: CallbackQuery):
             telegraph.create_page,
             title=safe_title[:200],
             html_content=page_content,
-            author_name="DreamxBotz"
+            author_name="Pᴀᴛʀɪᴄᴋ Bᴏᴛᴢ"
         )
 
         telegraph_url = response["url"]
