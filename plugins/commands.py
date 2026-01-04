@@ -130,13 +130,15 @@ async def start(client, message):
                 gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
             else:
                 gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"      
+            PIC = f"{random.choice(PICS)}?r={get_random_mix_id()}"
             await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-        return
+                photo=PIC,
+                caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+            return
+
 
         if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
             buttons = [[
@@ -162,13 +164,15 @@ async def start(client, message):
                 gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌘"
             else:
                 gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🌑"
+            PIC = f"{random.choice(PICS)}?r={get_random_mix_id()}"
             await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-        return
+                photo=PIC,
+                caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+            return
+
         if message.command[1].startswith("reff_"):
             try:
                 user_id = int(message.command[1].split("_")[1])
