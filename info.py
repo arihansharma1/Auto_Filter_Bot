@@ -32,10 +32,10 @@ INDEX_CAPTION = bool(environ.get('SAVE_CAPTION', True)) # Save caption db when i
 COVERX = bool(environ.get('COVERX', True)) # Use cover image for indexed files (default: True)
 # If you disable it then bot will use a default thumb for all files
 
-PICS = (environ.get('PICS', 'https://api.aniwallpaper.workers.dev/random?type=girl')).split() #random anime girl img each time from aniwallpaper (Experimental)
+PICS = (environ.get('PICS', 'https://graph.org/file/2ba24e00680e44d856dcc-80ccf4a824812645a8.jpg https://graph.org/file/3203beeac1bdb3a508d5c-78a1f24f34d409e261.jpg')).split() #random anime girl img each time from aniwallpaper (Experimental)
 # PICS = (environ.get('PICS', 'https://graph.org/file/56b5deb73f3b132e2bb73.jpg https://graph.org/file/5303692652d91d52180c2.jpg https://graph.org/file/425b6f46efc7c6d64105f.jpg https://graph.org/file/876867e761c6c7a29855b.jpg')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://graph.org/file/56b5deb73f3b132e2bb73.jpg")
+MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://graph.org/file/91dc4e944eab9ff39992b-c8253a0da1def35e12.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/242b7f1b52743938d81f1.jpg'))
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split()  # Fsub pic
@@ -43,26 +43,26 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c
 # ============================
 # Admin, Channels & Users Configuration
 # ============================
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '634637418').split()] # Replace with the actual admin ID(s) to add
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-100').split()]  # Channel id for auto indexing (make sure bot is admin)
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7364818327').split()] # Replace with the actual admin ID(s) to add
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002332540081').split()]  # Channel id for auto indexing (make sure bot is admin)
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-100'))  # Log channel id (make sure bot is admin)
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-100'))  # Bin channel id (make sure bot is admin)
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-100'))  # Premium logs channel id
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002382157424'))  # Log channel id (make sure bot is admin)
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002703989555'))  # Bin channel id (make sure bot is admin)
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002382157424'))  # Premium logs channel id
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-100').split()] #(make sure bot is admin)
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-100')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-100')  # Request channel id (make sure bot is admin)
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/')  # Support group link (make sure bot is admin)
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+iYKu-1vRdHE2OTg1')  # Support group link (make sure bot is admin)
 
 # FORCE_SUB 
-auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
+auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1003542785911 -1002846994597")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
 auth_channels     = environ.get("AUTH_CHANNELS", "-100")# Channels for force sub (make sure bot is admin)
 
 # ============================
 # Payment Configuration
 # ============================
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/e419f801841c2ee3db0fc.jpg')    # QR code image for payments
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'ɴᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ʀɪɢʜᴛ ɴᴏᴡ')    # Owner UPI ID for payments
+QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/a4af9d684a5a9ad5efd7f-0694a71ebeb3ea3898.jpg')    # QR code image for payments
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'arihansharma1@oksbi')    # Owner UPI ID for payments
 
 STAR_PREMIUM_PLANS = {
     10: "7day",
@@ -77,10 +77,10 @@ STAR_PREMIUM_PLANS = {
 # ============================
 DATABASE_URI = environ.get('DATABASE_URI', "")  # MongoDB URI for the database
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0") # Database name (default: cluster)
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'dreamcinezone_files') # Collection name (default: dreamcinezone_files)
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Mhakalx') # Collection name (default: dreamcinezone_files)
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), True) # Type True For Turn On MULTIPLE DB FUNTION 
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")  # MongoDB URI for the second database (if MULTIPLE_DB is True)
 # ============================
 # Movie Notification & Update Settings
